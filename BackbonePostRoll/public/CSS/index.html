@@ -1,0 +1,66 @@
+<!Doctype html>
+
+<html>
+<head>
+  <link rel = "stylesheet" href="/utilities/bootstrap.css" />
+    <link rel = "stylesheet" href="/CSS/style.css" />
+</head>
+<body>
+
+  <div id="wrapper">
+<h1 class='ambient-light'>Start creating a story together</h1>
+</div>
+
+  <div class="container">
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Author
+          </th>
+          <th>
+            Title
+          </th>
+          <th>
+            URL
+          </th>
+          <th>
+            Action
+          </th>
+
+        </tr>
+        <tr>
+          <td><input class="form-control author-input" /></td>
+          <td><input class="form-control title-input" /></td>
+          <td><input class="form-control url-input" /></td>
+          <td>
+            <button class="btn btn-primary add-blog">Add</button>
+          </td>
+
+        </tr>
+      </thead>
+
+      <tbody class ="blogs-list">
+
+      </tbody>
+    </table>
+  </div>
+
+
+<script type ="text/template" class="blogs-list-template">
+
+<td> <span class="author"><%=author%></span></td>
+<td> <span class="title"><%=title%></span></td>
+<td> <span class="url"><%=url%></span></td>
+<td> <button class="btn btn-warning edit-blog">EDIT</button><button class="btn btn-danger delete-blog">DELETE</button>
+  <button class="btn btn-success update-blog" style = "display:none">UPDATE</button><button class="btn btn-danger cancel" style = "display:none">Cancel</button></td>
+</script>
+
+<script src="/utilities/jquery-3.2.1.min.js"></script>
+<script src="/utilities/underscore-min.js"></script>
+<script src="/utilities/backbone-min.js"></script>
+<script src="/Js/scripts.js"></script>
+</body>
+</html>
