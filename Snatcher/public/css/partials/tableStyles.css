@@ -1,0 +1,221 @@
+section{
+  width:70%;
+  margin:0 auto;
+}
+table{
+  table-layout: fixed;
+}
+thead{
+font-size: 20px;
+padding:1px;
+
+}
+.siteDataHolder{
+  padding-top:30px;
+  padding-bottom: 30px;
+  width:80%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.siteDataHolder .smallTable th{
+  border-style:solid;
+  border-width: 2px;
+  border-radius:3px;
+  padding:5px;
+}
+.siteDataHolder .smallTable td{
+  text-align: center;
+  border-style:solid;
+  border-width: 0.3px;
+  border-radius:3px;
+  padding:5px;
+}
+.siteDataHolder .smallTable ul{
+  width:85%;
+  list-style: none;
+  padding-left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 13px;
+}
+.siteDataHolder .smallTable li{
+  display: inline-block;
+  margin-right: 50px;
+}
+.siteDataHolder .smallTable li:last-child{
+  margin-right: 0px;
+}
+
+.siteDataHolder .smallTable ul li div:last-child{
+  margin-top: -3px;
+}
+
+.generalInfoTable{
+  margin-bottom: 70px;
+  max-height: 339px;
+  min-height: 50px;
+  overflow-x: hidden;
+
+
+
+}
+.generalInfoTable table{
+
+  max-height: 300px;
+  min-height: 50px;
+  border-spacing: 0;
+
+}
+
+
+thead tr:first-child th:first-child {
+    border-radius: 3px 0 0 0;
+}
+thead tr:first-child th:last-child {
+    border-radius: 0 3px 0 0;
+  }
+  tbody tr:last-child td:first-child {
+      border-radius: 0 0 0 3px;
+  }
+  tbody tr:last-child td:last-child {
+    border-radius: 0 0 3px 0;
+}
+.generalInfoTable th{
+  border-style:solid;
+  border-width: 2px;
+
+
+
+}
+.generalInfoTable th, .generalInfoTable td{
+  text-align:center;
+  border: 1px solid #cdcdcd;
+  padding: 3px;
+
+
+}
+/*@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  .generalInfoTable table, .generalInfoTable th, .generalInfoTable thead, .generalInfoTable tbody, .generalInfoTable td, .generalInfoTable tr{
+    display:block;
+    text-align: left;
+  }
+  .generalInfoTable thead, .generalInfoTable tr{
+    position:absolute;
+    top: -9999px;
+			left: -9999px;
+
+  }
+  .generalInfoTable tr{
+    border-bottom: 1px solid #ccc;
+  }
+  .generalInfoTable td{
+    border:none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .generalInfoTable td:before{
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+    .generalInfoTable td:nth-of-type(1):before { content: "SCRAPE ID"; }
+		.generalInfoTable td:nth-of-type(2):before { content: "DATE"; }
+		.generalInfoTable td:nth-of-type(3):before { content: "TIME"; }
+		.generalInfoTable td:nth-of-type(5):before { content: "URL"; }
+}*/
+
+/*.headingsTables{
+  margin-bottom: 70px;
+}
+.headingsTables table{
+  border-collapse: collapse;
+	border: 1px solid #cdcdcd;
+}
+.headingsTables th{
+  border-style:solid;
+  border-width: 2px;
+  border-radius:3px;
+  padding:3px;
+}
+.headingsTables th, .headingsTables td{
+  text-align:center;
+  border: 1px solid #cdcdcd;
+  padding: 5px;
+}*/
+
+.scrappedHeadingsHolder{
+  width:80%;
+  padding:10px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.1);
+}
+.scrappedHeadingsHolder ul{
+  list-style: none;
+  padding:10px;
+  width:80%;
+  height:110%;
+}
+.scrappedHeadingsHolder ul li{
+  margin:0px;
+  max-width: 24%;
+  display: inline-block;
+  float:left;
+  border:1px solid #cdcdcd;
+}
+
+.headingTable,.childrenTable{
+  min-height: 150px;
+  max-height: 350px;
+  overflow-x: hidden;
+  width:100%;
+}
+.demoTable,.childTable{
+  width:100%;
+  text-align: center;
+
+}
+ thead tr:first-child th:first-child {
+    border-radius: 3px 0 0 0;
+
+}
+
+thead tr:first-child th:last-child {
+    border-radius: 0 3px 0 0;
+  }
+ tbody tr:last-child td:first-child {
+      border-radius: 0 0 0 3px;
+  }
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+
+.demoTable tbody tr td{
+  border-top:1px solid #cdcdcd;
+}
+
+#biggerTable{
+  max-width:46%;
+  min-width: 46%;
+  margin-left: 1%;
+  margin-bottom: 3%;
+}
+#smallerTable{
+  min-height: 150px;
+  max-height:150px;
+max-width: 30%;
+min-width: 30%;
+margin-left: 1%;
+margin-bottom: 3%;
+overflow-x: hidden;
+
+}

@@ -1,0 +1,288 @@
+<div class="content-title statistic-title">
+	<br/>
+	<h3>Statistic tools</h3>
+	<h2>Site Data</h2>
+</div>
+
+
+<!--If there is error we display it -->
+<% if(typeof sucess != 'undefined') { %>
+  <div class="sucmsg">
+    <p><%= sucess %></p>
+  </div>
+<% } %>
+
+
+<!--If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+  <div class="errmsg">
+    <p><%= error %></p>
+  </div>
+<% } %>
+
+
+<!-- If there is warning we display it -->
+<% if(typeof warn != 'undefined') { %>
+  <div class="wrnmsg">
+    <p><%= warn %></p>
+  </div>
+<% } %>
+
+
+<!--If there is warning we display it -->
+<% if(typeof info != 'undefined') { %>
+  <div class="infmsg">
+    <p><%= info %></p>
+  </div>
+<% } %>
+
+
+<!-- Form for ID input to search for scrap -->
+<div class="content-div">
+	<p>Enter analyzed ID to preview analyzed data !</p>
+	<form method="POST" action="/sitedata">
+	  <input type ="text" name="enterid" placeholder="Enter ID here..." required />
+	  <button type="submit" value="submit" name="idbutton">Preview analyze</button>
+	</form>
+</div>
+
+
+<!-- Ako samo prikazujemo stranicu  -->
+<% if(typeof analyzed != 'undefined') { %>
+	<div class="content-div">
+		<p><%= analyzed[0].title %></p>
+	</div>
+
+	<div id ="scrap-table">
+
+		<section>
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- Stvaramo header za html content -->
+			<table class="data-table content-div">
+				<thead class="table-thread">
+					<tr>
+						<th>GENERAL</th>
+						<th>DATA</th>
+					</tr>
+				</thead>
+
+	      <tfoot class="table-thread">
+					<tr>
+						<th>GENERAL</th>
+						<th>DATA</th>
+					</tr>
+				</tfoot>
+
+				<tbody>
+					<tr>
+						<th>URL</th>
+						<th><%=analyzed[0].url%></th>
+					</tr>
+					<tr class="table-body">
+						<th>TITLE</th>
+						<th><%=analyzed[0].title%></th>
+					</tr>
+					<tr>
+						<th>ANALYZED DATE</th>
+						<td><b><%= analyzed[0].date.getDate() + '.' + parseInt(analyzed[0].date.getMonth()+1) + '.' + analyzed[0].date.getFullYear() + '.' %></b></td>
+					</tr>
+					<tr class="table-body">
+						<th>ANALYZED TIME</th>
+						<th><%=analyzed[0].time%></th>
+					</tr>
+					<tr>
+						<th>SCRAP ID</th>
+						<th><%=analyzed[0].id%></th>
+					</tr>
+				</tbody>
+
+			</table>
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- Tablica za HTTP headers -->
+			<table class="data-table content-div">
+
+				<thead class="table-thread">
+					<tr>
+						<th>HTTP HEADERS</th>
+						<th>DATA</th>
+					</tr>
+				</thead>
+
+	      <tfoot class="table-thread">
+					<tr>
+						<th>HTTP HEADERS</th>
+						<th>DATA</th>
+					</tr>
+				</tfoot>
+
+				<tbody>
+					<tr>
+						<th>HTTP STATUS</th>
+						<th><%=analyzed[0].http_status%></th>
+					</tr>
+					<tr class="table-body">
+						<th>CONTENT LENGTH</th>
+						<th><%=analyzed[0].con_length%></th>
+					</tr>
+					<tr>
+						<th>CONTENT TYPE</th>
+						<th><%=analyzed[0].con_type%></th>
+					</tr>
+					<tr class="table-body">
+						<th>SERVER</th>
+						<th><%=analyzed[0].server%></th>
+					</tr>
+				</tbody>
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- Tablica za HTML tags -->
+			<table class="data-table content-div">
+
+				<thead class="table-thread">
+					<tr>
+						<th>HTML TAGS</th>
+						<th>DATA</th>
+					</tr>
+				</thead>
+
+				<tfoot class="table-thread">
+					<tr>
+						<th>HTML TAGS</th>
+						<th>DATA</th>
+					</tr>
+				</tfoot>
+
+				<tbody>
+					<tr>
+						<th>TITLE</th>
+						<th><%=analyzed[0].title%></th>
+					</tr>
+					<tr class="table-body">
+						<th>CHARSET</th>
+						<th><%=analyzed[0].charset%></th>
+					</tr>
+				</tbody>
+
+			</table>
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- Stvaramo tablicu za ispis headera -->
+			<% if(headers != '') { %>
+				<table class="data-table content-div" style="text-align: left">
+
+					<thead class="table-thread">
+						<tr>
+							<th> </th>
+							<th>HEADERS</th>
+						</tr>
+					</thead>
+
+					<tfoot class="table-thread">
+						<tr>
+							<th>.</th>
+							<th>HEADERS</th>
+						</tr>
+					</tfoot>
+
+					<tbody>
+					<!-- Za svaki ispis iz tablice stvaramo row u tablici -->
+					<% for(var i=0;i<headers.length;i++) {%>
+
+						<!-- Dodajemo razmak prema value-u headera -->
+						<% if(headers[i].head_value == 0) { %>
+							<tr class="table-body h1-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 5px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 1) { %>
+							<tr class="table-body h2-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 10px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 2) { %>
+							<tr class="table-body h3-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 15px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 3) { %>
+							<tr class="h4-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 20px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 4) { %>
+							<tr class="h5-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 25px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 5) { %>
+							<tr class="h6-style">
+								<td style="color: blue"><%= headers2[i] %></td>
+								<td style="text-indent: 30px"><%= headers[i].head_text %></td>
+							</tr>
+						<% } else if(headers[i].head_value == 6) { %>
+							<% if(headers[i].head_text.length > 2) { %>
+								<tr class="p-style">
+									<td style="color: blue"><%= headers2[i] %></td>
+									<td style="text-indent: 35px"><%= headers[i].head_text %></td>
+								</tr>
+							<% } %>
+						<% } else if(headers[i].head_value == 7) { %>
+							<% if(headers[i].head_text.length > 0) { %>
+								<tr class="a-style">
+									<td style="color: blue"><%= headers2[i] %></td>
+										<td style="text-indent: 40px">
+											<% if(headers[i+1].head_text.length > 2) { %>
+												<% if(headers[i+1].head_text[0] != '/') { %>
+													<% if(headers[i+1].head_text[0] != '#') { %>
+														<% if(headers[i+1].head_text[0] != '_') { %>
+															<a target="_blank" href="<%= headers[i+1].head_text %>" class="a-style">
+																<%= headers[i].head_text %>
+															</a>
+														<% } else { %>
+															<%= headers[i].head_text %>
+														<% } %>
+													<% } else { %>
+														<%= headers[i].head_text %>
+													<% } %>
+												<% } else { %>
+													<%= headers[i].head_text %>
+												<% } %>
+											<% } else { %>
+												<%= headers[i].head_text %>
+											<% } %>
+										</td>
+								</tr>
+							<% }%>
+						<% } else if(headers[i].head_value == 8) { %>
+						<% }%>
+					</tbody>
+					<% }%>
+				</table>
+			<% }%>
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		</section>
+
+
+		<!-- Sekcija za prikaz sike ako je ima -->
+		<% if(typeof picture != 'undefined') { %>
+			<section class="content-div">
+		  	<img src= "<%=picture.id%>" class="imgtool"></img>
+			</section>
+		<% } %>
+
+
+	</div>
+
+<% } %>
+<hr>
+
+
+<div class="content-div">
+	<p>Select scraps to preview <a href="/lastanalyzes">here</a>.</p>
+</div>

@@ -1,0 +1,524 @@
+/***********TABLES**********/
+/***********NEW TABLE
+
+
+
+@media
+only screen and (max-width: 1560px),(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+  td{
+    padding-top: 0;
+  }
+  td button{
+    height:5px;
+    height: 31px;
+    margin-left: -300;
+    width: 266px;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+
+  }
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+
+	}
+
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr {
+    border: 1px solid #ccc; }
+
+	td {
+
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+    height:30px;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+    height:10%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+
+
+	Label the data<th>ID</th>
+  <th>TIME</th>
+  <th>URL</th>
+  <th>STATUS</th>
+  <th>DATE</th>
+  <th>HP</th>
+  <th>HL</th>
+  <th>HD</th>
+  <th>CH</th>
+  <th>IM</th>
+  <th>YR</th>
+  <th>PR</th>
+  <th>VIEW</th>
+
+	td:nth-of-type(1):before { content: "SCRAP ID"; }
+	td:nth-of-type(2):before { content: "TIME"; }
+	td:nth-of-type(3):before { content: "URL"; }
+	td:nth-of-type(4):before { content: "STATUS"; }
+	td:nth-of-type(5):before { content: "DATE"; }
+	td:nth-of-type(6):before { content: "HTTP HEADERS"; }
+  td:nth-of-type(7):before { content: "HTML TAGS"; }
+	td:nth-of-type(8):before { content: "HEADINGS"; }
+	td:nth-of-type(9):before { content: "CHILD URLS"; }
+	td:nth-of-type(10):before { content: "IMAGE"; }
+	td:nth-of-type(11):before { content: "YOUR"; }
+	td:nth-of-type(12):before { content: "PRIVATE"; }
+
+
+
+}
+
+
+
+*/
+
+/************SCROLLLABE TABLE**********/
+
+/*table{
+  width:100%;
+  table-layout: fixed;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+tr{
+  height:30px;
+}
+
+tr:nth-of-type(odd) {
+  background-color: blue;
+}
+td{
+  padding: 8px;
+  text-align: left;
+  vertical-align:left;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+section{
+  margin: 50px;
+}*/
+
+
+/***********NEW TABLE*********/
+
+/*.rwd-table {
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 700px;}
+  .rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  .rwd-table th {
+    text-align: left;
+    display: none; }
+  .rwd-table td {
+    display: block; }
+    .rwd-table td:first-child {
+      padding-top: .5em; }
+    .rwd-table td:last-child {
+      padding-bottom: .5em; }
+    .rwd-table td:before {
+      content: attr(data-th) ": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block; }
+      @media (min-width: 800px) {
+        .rwd-table td:before {
+          display: none; } }
+  .rwd-table th, .rwd-table td {
+     }
+    @media (min-width: 800px) {
+      .rwd-table th, .rwd-table td {
+        display: table-cell;
+        text-align: center;
+        padding: .25em .5em;
+       }
+       .footer{
+         position: static !important;
+       }
+        .rwd-table th:first-child, .rwd-table td:first-child {
+          padding-left: 0; }
+        .rwd-table th:last-child, .rwd-table td:last-child {
+          padding-right: 0; } }
+
+
+
+
+.rwd-table {
+  white-space: nowrap;
+  font-size: 10px;
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden; }
+  .rwd-table tr {
+    border-color: #46637f; }
+  .rwd-table th, .rwd-table td {
+    margin: .5em 1em; }
+    @media (min-width: 480px) {
+      .rwd-table th, .rwd-table td {
+        padding: 1em !important; } }
+  .rwd-table th, .rwd-table td:before {
+    color: #dd5; }*/
+
+/**************HOME STAT STYLE*******************/
+#fdw-pricing-table {
+
+	text-align: center;
+	width: 95%; /* total computed width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	zoom: 1;
+}
+
+#fdw-pricing-table:before, #fdw-pricing-table:after {
+	 content: "";
+	 display: table
+}
+
+#fdw-pricing-table:after {
+	 clear: both
+}
+
+#fdw-pricing-table .plan {
+	font: 13px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	color: #333;
+	padding: 20px;
+	width: 300px;
+  margin-left: 10px;
+	_display: inline; /* IE6 double margin fix */
+	position: relative;
+	-moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+	box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+}
+
+#fdw-pricing-table .plan:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  right: 4px;
+  width: 80%;
+  top: 80%;
+  -webkit-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+  -webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+
+#fdw-pricing-table .popular-plan {
+	top: -20px;
+	padding: 40px 20px;
+}
+
+#fdw-pricing-table .header {
+	position: relative;
+	font-size: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 40px;
+	margin: -20px -20px 20px -20px;
+	border-bottom: 8px solid;
+	background-color: #eee;
+	background-image: -moz-linear-gradient(#fff,#eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+	background-image: -webkit-linear-gradient(#fff, #eee);
+	background-image: -o-linear-gradient(#fff, #eee);
+	background-image: -ms-linear-gradient(#fff, #eee);
+	background-image: linear-gradient(#fff, #eee);
+}
+
+#fdw-pricing-table .header:after {
+	position: absolute;
+	bottom: -8px; left: 0;
+	height: 3px; width: 100%;
+	content: '';
+}
+
+#fdw-pricing-table .plan1 .header{
+	border-bottom-color: #B3E03F;
+}
+
+#fdw-pricing-table .plan2 .header{
+	border-bottom-color: #7BD553;
+}
+
+#fdw-pricing-table .plan3 .header{
+	border-bottom-color: #3AD5A0;
+}
+
+#fdw-pricing-table .plan4 .header{
+	border-bottom-color: #45D0DA;
+}
+
+#fdw-pricing-table .text{
+	font-size: 45px;
+}
+
+#fdw-pricing-table .monthly{
+	font-size: 13px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	color: #999;
+}
+
+#fdw-pricing-table ul {
+	margin: 20px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#fdw-pricing-table li {
+	padding: 10px 10px;
+  display:inline-block;
+  float:left;
+}
+#fdw-pricing-table ul li #stat{
+
+display: inline-block;
+}
+
+#fdw-pricing-table .signup {
+	position: relative;
+	padding: 10px 20px;
+	color: #fff;
+	font: bold 14px Arial, Helvetica;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #72ce3f;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+	opacity: .9;
+}
+
+#fdw-pricing-table .signup:hover {
+	opacity: 1;
+}
+
+#fdw-pricing-table .signup:active {
+	-moz-box-shadow: 0 2px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 2px 2px rgba(0,0,0,.3) inset;
+}
+
+#fdw-pricing-table .plan1 .signup{
+	background: #B3E03F;
+}
+
+#fdw-pricing-table .plan2 .signup{
+	background: #7BD553;
+}
+
+#fdw-pricing-table .plan3 .signup{
+	background: #3AD5A0;
+}
+
+#fdw-pricing-table .plan4 .signup{
+	background: #45D0DA;
+}
+
+#fdw-pricing-table .plan5 .signup{
+	background: #8080FF;
+}
+
+/************SCROLLANJE TABLICA*********/
+#liHolder{
+    position:relative;
+}
+
+#liHolder ul{
+    padding:0;
+}
+
+.item{
+    width:85%;
+    margin:0 auto;
+    margin-bottom: 30px;
+}
+
+li{
+
+    list-style: none;
+}
+
+
+
+#scroll-container {
+
+  max-width: 100%;
+  position: relative;
+  min-height: 200px;
+}
+
+.wrap-container {
+
+  max-height: 400px;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  /* background: #eee; */
+  padding-right: 20px;
+  }
+
+
+.wrap-container ul {
+    list-style: none;
+    position: relative;
+    transition: transform .3s;
+    top: 50px; }
+  .wrap-container ul, .wrap-container ul li {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+
+  .wrap-container ul li {
+
+    padding-top:10px;
+    line-height: 50px;
+    transition: transform .3s;
+    overflow: hidden; }
+
+    .wrap-container ul li.active .item {
+      transform: scale(1); }
+.wrap-container ul li .item {
+    position: relative;
+    transition: transform 400ms;
+    display: inline-block; }
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+
+.smaller{
+  width:50px;
+  font-size: 15px;
+}
+
+
+/***********OLD TABLES***************/
+/*
+
+
+
+
+
+ #historyTable{
+
+   height:400px;
+ }
+
+ th{
+
+
+   font-weight: 900;
+   font-size: 12px;
+   color: #fff;
+   text-transform: uppercase;
+ }
+
+ table td:nth-of-type(3){
+
+ }
+
+*/
+/**********NEW TABLE STYLES*********/
+section{
+  margin:20px 100px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+
+
+table, th, td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+.tbl-content{
+  min-height:25px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.tbl-header{
+
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  background-color: rgba(255,255,255,0.3);
+ }
+
+#scrapeIdBox, #scrapeStatusBox{
+  width:30px;
+
+}
+
+#scrapeUrlBox{
+  width:150px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  padding:2px;
+}
+
+#scrapeDateBox, #scrapeTimeBox{
+  width:50px;
+}

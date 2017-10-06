@@ -1,0 +1,232 @@
+<html>
+  <!-- Includamo head file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/partials/page-style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/partials/accountForms.css" rel="stylesheet" type="text/css" />
+  <link href="/css/partials/inputForm.css" rel="stylesheet" type="text/css" />
+
+  <link href="/css/partials/messages.css" rel="stylesheet" type="text/css" />
+  <link href="/css/partials/tableStyles.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/Js/jqueryHeader.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<div class="whole-page-wrapper">
+  <!-- NAVIGATION -->
+  <% include partials/heading.ejs %>
+
+  <!--CONTENT -->
+  <%-include(content) %>
+
+
+</div>
+<% include partials/footer.ejs %>
+<script>
+$(function() {
+var width = $(window).width();
+$('.sucmsg').delay(2000).fadeIn('fast').delay(3000).fadeOut('slow');
+$('.wrnmsg').delay(2000).fadeIn('fast').delay(3000).fadeOut('slow');
+$('.infmsg').delay(2000).fadeIn('fast').delay(3000).fadeOut('slow');
+if(width==600 || width==800 || width==768 || width==414 || width==412 || width==375 || width==360 || width==320){
+
+if(width==320 || width==360 || width==375 || width==412 || width==414 || width==768){
+$("nav").removeClass("nav-desktop").addClass("nav-mobile");
+
+}
+
+else{
+$("nav").removeClass("nav-desktop").addClass("nav-mobile");
+$("#navigationBar ul li:nth-child(1) a i").removeClass("fa fa-home fa-2x").addClass("fa fa-home fa-3x");
+$("#navigationBar ul li:nth-child(2) a i").removeClass("fa fa-user fa-2x").addClass("fa fa-user fa-3x");
+$("#navigationBar ul li:nth-child(3) a i").removeClass("fa fa-wpexplorer fa-2x").addClass("fa fa-wpexplorer fa-3x");
+$("#navigationBar ul li:nth-child(4) a i").removeClass("fa fa-bar-chart fa-2x").addClass("fa fa-bar-chart fa-3x");
+$("#navigationBar ul li:nth-child(6) a i").removeClass("fa fa-thumbs-up fa-2x").addClass("fa fa-thumbs-up fa-3x");
+$("#navigationBar ul li:nth-child(6) a i").removeClass("fa fa-question fa-2x").addClass("fa fa-question fa-3x");
+}
+
+
+
+}else{
+if(width==2560){
+$("#navigationBar ul li:nth-child(1) a i").removeClass("fa fa-home fa-2x").addClass("fa fa-home fa-4x");
+$("#navigationBar ul li:nth-child(2) a i").removeClass("fa fa-user fa-2x").addClass("fa fa-user fa-4x");
+$("#navigationBar ul li:nth-child(3) a i").removeClass("fa fa-wpexplorer fa-2x").addClass("fa fa-wpexplorer fa-4x");
+$("#navigationBar ul li:nth-child(4) a i").removeClass("fa fa-bar-chart fa-2x").addClass("fa fa-bar-chart fa-4x");
+$("#navigationBar ul li:nth-child(5) a i").removeClass("fa fa-thumbs-up fa-2x").addClass("fa fa-thumbs-up fa-4x");
+$("#navigationBar ul li:nth-child(6) a i").removeClass("fa fa-question fa-2x").addClass("fa fa-question fa-4x");}
+}
+
+});
+</script>
+
+<script>
+window.addEventListener ? window.addEventListener("mousemove", showMouseXY, false) : window.attachEvent && window.attachEvent("onmousemove", showMouseXY);
+
+    function text3d(x, y) {
+      var colors3d = ["#cccccc", "#c9c9c9", "#bbbbbb", "#b9b9b9", "#aaaaaa", "#a9a9a9"];
+      var styleStore = "";
+      for (var i = 0; i < 6; i++) {
+        styleStore += (x * (i * .03)) + "px " + (y * (i * .03)) + "px 0 " + colors3d[i] + ",";
+      }
+      return styleStore.substr(0, styleStore.length - 1);
+    }
+
+    function shadow3d(x, y) {
+      var shadow = ["rgba(0,0,0,.1)", "rgba(0,0,0,.15)", "rgba(0,0,0,.2)", "rgba(0,0,0,.2)", "rgba(0,0,0,.25)", "rgba(0,0,0,.5)"];
+      var styleStore = "";
+      for (var i = 0; i < 6; i++) {
+        styleStore += (x * (i * .15)) + "px " + (y * (i * .15)) + "px " + (i * 4) + "px " + shadow[i] + ",";
+      }
+      return styleStore.substr(0, styleStore.length - 1);
+    }
+
+    function showMouseXY(event) {
+      var target = document.querySelector("#snatcherDiv p");
+      var body = document.querySelector("body");
+      var cX = -(window.innerWidth / 2 - event.clientX) /40 ;
+      var cY = (window.innerHeight / 2 - event.clientY) /40;
+      target.setAttribute("style", "text-shadow:" + text3d(-(cX), cY) + "," + shadow3d(-(cX), cY) + ";transform:rotateY(" + cX + "deg) rotateX(" + cY + "deg);");
+      var radX = (event.clientX > (window.innerWidth * .333333) ? (event.clientX < window.innerWidth * .666666 ? "center" : "right") : "left");
+      var radY = (event.clientY > (window.innerHeight * .333333) ? (event.clientY < window.innerHeight * .666666 ? "center" : "bottom") : "top");
+
+
+
+
+    }
+</script>
+<script>
+(function($) {
+    $(document).ready(function() {
+    $(window).on('load, resize', function mobileViewUpdate() {
+
+    var viewportWidth = $(window).width();
+    var viewportHeight = $(window).height();
+    if (viewportWidth <= 600) {
+    $("#navigationBar").removeClass("nav-desktop").addClass("nav-mobile");
+
+
+      }
+      else{
+      $("#navigationBar").removeClass("nav-mobile").addClass("nav-desktop");
+
+      }
+
+});
+    });
+})(jQuery);
+</script>
+<script>
+
+$(document).ready(function() {
+    myFunc($(".show"));
+
+
+
+});
+
+function myFunc(oEle)
+{
+
+
+
+$("#fdw-pricing-table ul li #hiddenStat").css("display","none");
+
+	oEle.delay(3000).fadeOut('slow', function(){
+		if (oEle.next().length)
+		{
+			oEle.next().fadeIn('3000', function(){
+				myFunc(oEle.next());
+			});
+		}
+		else
+		{
+			oEle.siblings(":first").fadeIn('3000', function(){
+				myFunc(oEle.siblings(":first"));
+			});
+		}
+	});
+}
+</script>
+
+
+
+<!--Table-->
+
+<script>
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+</script>
+
+<script>
+window.onresize = function() {
+    if (window.innerWidth > 300) {
+        document.getElementById("table").style.width = "100%";
+    }
+    else {
+        document.getElementById("table").style.width = "300px";
+    }
+}
+</script>
+
+<script src="/Js/inputField.js"></script>
+<script>
+$(document).ready(function() {
+
+  var max=$(".siteDataHolder .smallTable th").eq(0);
+
+  for (var i=0;i<$(".siteDataHolder .smallTable th").length; i++){
+
+   if ($(".siteDataHolder .smallTable th").eq(i).width()>max.width()){
+
+     max=$(".siteDataHolder .smallTable th").eq(i);
+    }
+
+  }
+
+  var targetWidth = max.width();
+
+
+
+for (var i=0;i<$(".siteDataHolder .smallTable th").length; i++){
+
+  $(".siteDataHolder .smallTable th").eq(i).css("width",targetWidth);
+
+}
+for(var i = 0; i < $(".siteDataHolder th").length; i++){
+    $(".siteDataHolder td").eq(i).width($(".siteDataHolder th").eq(i).width()-5);
+}
+});
+</script>
+
+
+<script>
+var $table = $('.demoTable');
+$table.floatThead({
+    scrollContainer: function($table){
+        return $table.closest('.headingTable');
+    }
+});
+
+</script>
+<script>
+var $table = $('.scrollableTable');
+$table.floatThead({
+    scrollContainer: function($table){
+        return $table.closest('.generalInfoTable');
+    }
+});
+
+</script>
+
+<script>
+
+
+</script>
+</body>
+</html>

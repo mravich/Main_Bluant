@@ -1,0 +1,389 @@
+<div class="content-wrapper">
+<div id="titleDiv">
+		Statistic tools
+</div>
+
+<div id="snatcherDiv">
+		<p>
+		SITE DATA
+		</p>
+</div>
+
+
+<!--If there is error we display it -->
+<% if(typeof sucess != 'undefined') { %>
+  <div class="sucmsg">
+    <p><%= sucess %></p>
+  </div>
+<% } %>
+
+
+<!--If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+  <div class="errmsg">
+    <p><%= error %></p>
+  </div>
+<% } %>
+
+
+<!-- If there is warning we display it -->
+<% if(typeof warn != 'undefined') { %>
+  <div class="wrnmsg">
+    <p><%= warn %></p>
+  </div>
+<% } %>
+
+
+<!--If there is warning we display it -->
+<% if(typeof info != 'undefined') { %>
+  <div class="infmsg">
+    <p><%= info %></p>
+  </div>
+<% } %>
+
+<center>
+<div class="content-div">
+	<form method="POST" action="/sitedata">
+	  <input type ="text" name="enterid" placeholder="Enter ID..." required />
+	  <button type="submit" value="submit" name="idbutton">Preview data</button>
+	</form>
+</div>
+</center>
+
+<center>
+<!-- Ako samo prikazujemo stranicu  -->
+<% if(typeof main != 'undefined') { %>
+	<center>
+		<h1>WHAT WAS SCRAPPED?</h1>
+	</center>
+	<section>
+		<div class="tbl-header" style="width:500px;">
+
+				<table cellpadding="0" cellspacing="0" border="0">
+						<thead>
+
+								<tr>
+									<th>HTTP</th>
+									<th>HTML</th>
+									<th>HEAD</th>
+									<th>URLS</th>
+									<th>IMAG</th>
+									<th>YOUR</th>
+									<th>PRIV</th>
+								</tr>
+						</thead>
+				</table>
+			</div>
+			<div class="tbl-content" id="historyTable" style="width:500px;height:35px;">
+					<table>
+							<tbody>
+								<tr>
+										<td>
+											<% if(https != '') { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+										<td>
+											<% if(htmls != '') { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+										<td>
+											<% if(headings != '') { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+										<td>
+											<% if(childs != '') { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+										<td>
+											<% if(picture != '') { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+										<td>
+											<% if(typeof user == 'undefined') { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } else { %>
+												<% if(main[0].id_user == user.id) { %>
+													<img src= "/imgs/true.png" class="icon"></img>
+												<% } else { %>
+													<img src= "/imgs/false.png" class="icon"></img>
+												<% } %>
+											<% } %>
+										</td>
+										<td>
+											<% if(main[0].private) { %>
+												<img src= "/imgs/true.png" class="icon"></img>
+											<% } else { %>
+												<img src= "/imgs/false.png" class="icon"></img>
+											<% } %>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<% } %>
+	</section>
+
+
+
+
+
+<% if(typeof main != 'undefined') { %>
+<center>
+	<h1>GENERAL INFO ABOUT THE SCRAPE</h1>
+</center>
+	<section>
+		<div class="tbl-header">
+			<table cellpadding="0" cellspacing="0" border="0">
+					<thead>
+
+						<tr>
+							<th id="scrapeIdBox">SCRAP ID</th>
+							<th id="scrapeUrlBox">URL</th>
+							<th id="scrapeStatusBox">STATUS</th>
+							<th id="scrapeDateBox">ANALYZED DATE</th>
+							<th id="scrapeTimeBox">ANALYZED TIME</th>
+						</tr>
+					</thead>
+			</table>
+		</div>
+		<div class="tbl-content">
+			<table>
+					<tbody>
+						<tr>
+						<td id="scrapeIdBox"><%=main[0].id%></td>
+						<td id="scrapeUrlBox"><%=main[0].url%></td>
+						<td id="scrapeStatusBox"><%=main[0].status%></td>
+						<td id="scrapeDateBox"><%= main[0].date.getDate() + '.' + parseInt(main[0].date.getMonth()+1) + '.' + main[0].date.getFullYear() + '.' %></td>
+						<td id="scrapeTimeBox"><%=main[0].time%></td>
+						</tr>
+
+					</tbody>
+
+			</table>
+	</div>
+
+	</section>
+<% } %>
+
+
+
+<% if(typeof https != 'undefined' && https != '') { %>
+<CENTER>
+	<h1>HTTP HEADINGS</h1>
+</CENTER>
+	<section>
+		<div class="tbl-header">
+			<table cellpadding="0" cellspacing="0" border="0">
+					<thead>
+
+						<tr>
+							<th>CONTENT LENGTH</th>
+							<th>CONTENT TYPE</th>
+							<th>SERVER</th>
+						</tr>
+					</thead>
+			</table>
+		</div>
+		<div class="tbl-content">
+			<table>
+					<tbody>
+						<tr>
+							<td data-th="CONTENT LENGTH"><%=https[0].length%></td>
+							<td data-th="CONTENT TYPE"><%= https[0].type %></td>
+							<td data-th="SERVER"><%=https[0].server%></td>
+						</tr>
+					</tbody>
+			</table>
+	</div>
+
+	</section>
+<% } %>
+
+
+<% if(typeof htmls != 'undefined' && htmls != '') { %>
+	<CENTER>
+		<h1>HTML TAGS</h1>
+	</CENTER>
+	<section>
+		<div class="tbl-header">
+			<table cellpadding="0" cellspacing="0" border="0">
+					<thead>
+
+						<tr>
+							<th>TITLE</th>
+							<th>CHARSET</th>
+						</tr>
+					</thead>
+			</table>
+		</div>
+		<div class="tbl-content">
+			<table>
+					<tbody>
+						<tr>
+							<td data-th="CONTENT LENGTH"><%=htmls[0].title%></td>
+							<td data-th="CONTENT TYPE"><%= htmls[0].charset %></td>
+						</tr>
+					</tbody>
+			</table>
+	</div>
+
+	</section>
+<% } %>
+
+
+
+<% if(typeof headings != 'undefined' && headings != '') { %>
+	<section>
+		<table class="data-table content-div" style="text-align: left">
+			<thead class="table-thread">
+				<tr>
+					<th> </th>
+					<th>Headings</th>
+				</tr>
+			</thead>
+			<tbody>
+			<!-- Za svaki ispis iz tablice stvaramo row u tablici -->
+			<% for(var i=0;i<headings.length;i++) { %>
+				<!-- Dodajemo razmak prema value-u headera -->
+				<% if(headings[i].value == 0) { %>
+					<tr class="table-body h1-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 5px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 1) { %>
+					<tr class="table-body h2-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 10px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 2) { %>
+					<tr class="table-body h3-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 15px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 3) { %>
+					<tr class="h4-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 20px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 4) { %>
+					<tr class="h5-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 25px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 5) { %>
+					<tr class="h6-style">
+						<td style="color: white"><%= headings2[i] %></td>
+						<td style="text-indent: 30px"><%= headings[i].text %></td>
+					</tr>
+				<% } else if(headings[i].value == 6) { %>
+					<% if(headings[i].text.length > 2) { %>
+						<tr class="p-style">
+							<td style="color: white"><%= headings2[i] %></td>
+							<td style="text-indent: 35px"><%= headings[i].text %></td>
+						</tr>
+					<% } %>
+				<% } else if(headings[i].value == 7) { %>
+					<% if(headings[i].text.length > 0) { %>
+						<tr class="a-style">
+							<td style="color: white"><%= headings2[i] %></td>
+								<td style="text-indent: 40px">
+									<% if(headings[i+1].text.length > 2) { %>
+										<% if(headings[i+1].text[0] != '/') { %>
+											<% if(headings[i+1].text[0] != '#') { %>
+												<% if(headings[i+1].text[0] != '_') { %>
+													<a target="_blank" href="<%= headings[i+1].text %>" class="a-style">
+														<%= headings[i].text %>
+													</a>
+												<% } else { %>
+													<%= headings[i].text %>
+												<% } %>
+											<% } else { %>
+												<%= headings[i].text %>
+											<% } %>
+										<% } else { %>
+											<%= headings[i].text %>
+										<% } %>
+									<% } else { %>
+										<%= headings[i].text %>
+									<% } %>
+								</td>
+						</tr>
+					<% } %>
+				<% } else if(headings[i].value == 8) { %>
+				<% } %>
+			</tbody>
+			<% } %>
+		</table>
+	</section>
+<% } %>
+
+
+<% if(typeof childs != 'undefined' && childs != '' && childs.length > 0) { %>
+<div id="scrap-table" class="content-div">
+	<section>
+
+		<table class="data-table">
+
+			<!-- Stvaramo header tablice -->
+			<thead class="table-thread">
+				<tr>
+					<th>CHILD ID</th>
+					<th>SCRAP ID</th>
+					<th>URL</th>
+					<th>SCRAPE</th>
+				</tr>
+			</thead>
+
+			<!-- Za svaki ispis iz tablice stvaramo row u tablici -->
+			<% for(var i=0;i<childs.length;i++) {%>
+
+				<!-- Svakom drugom stavljamo crnu pozadinu -->
+				<% if(i%2 == 1) {%>
+					<tbody  class="table-body2">
+				<%} else {%>
+					<tbody class="table-body">
+				<% } %>
+
+					<tr>
+						<td><%= childs[i].id %></td>
+						<td><%= childs[i].id_scrap %></td>
+						<td><%= childs[i].url %></td>
+
+						<td>
+							<form method="POST" action="/scraperx">
+								<button type="submit" name="item" value="<%=childs[i].url%>">Analyze</button>
+							</form>
+						</td>
+
+					</tr>
+				</tbody>
+			<% } %>
+
+		</table>
+	</section>
+</div>
+<% } %>
+
+<!-- Sekcija za prikaz sike ako je ima -->
+<% if(typeof picture != 'undefined' && picture != '') { %>
+	<section class="content-div">
+		<img src= "<%=picture%>" style="max-height: 500px"></img>
+	</section>
+<% } %>
+
+</div>

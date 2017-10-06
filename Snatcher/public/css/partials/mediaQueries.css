@@ -1,0 +1,1007 @@
+/**********MEDIA QUERIESS ********************/
+@media only screen and (max-width: 2560px){
+
+        #titleDiv{
+          font-size: 150px;
+        }
+        #snatcherDiv p{
+          font-size: 200px;
+        }
+
+        .nav-desktop{
+          top:565;
+        }
+
+        #pageTextContent{
+          font-size: 50px;
+        }
+
+        #formDiv{
+          width:820px;
+          height:100px;
+        }
+
+        form, .container, .fieldRow , .fieldRow input, button {
+          height: 80px;
+        }
+
+        .pulse{
+          width:144px;
+        }
+
+
+
+        #bottomLine{
+          margin-top: 150px;
+        }
+
+      .footer{
+        position:absolute;
+      }
+        .footer p{
+          font-size: 25px;
+        }
+
+        .login-wrap{
+          width:500px;
+          height:600px;
+        }
+
+        .login-html{
+          height:500px;
+          width:350px;
+        }
+
+        #tab1{
+          margin-left: 65px;
+          font-size: 30px;
+        }
+        #tab2{
+
+          font-size: 30px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 20px;
+          margin-bottom: 30px !important;
+        }
+
+        .tbl-header th{
+          font-size: 30px;
+        }
+        .tbl-content td{
+          font-size: 18px;
+        }
+
+}
+
+
+@media only screen and (max-width: 2500px){
+
+        #titleDiv{
+          font-size: 70px;
+        }
+        #snatcherDiv p{
+          font-size: 100px;
+        }
+
+        .nav-desktop{
+          top:120;
+        }
+
+        #pageTextContent{
+          font-size: 30px;
+        }
+
+        #formDiv{
+          width:750px;
+          height:80px;
+        }
+
+        form, .container, .fieldRow , .fieldRow input, button {
+          height: 60px;
+        }
+
+        .pulse{
+          width:122px;
+        }
+
+
+
+        #bottomLine{
+          margin-top: 150px;
+        }
+
+        .footer{
+        position:static;
+        }
+        .footer p{
+          font-size: 20px;
+        }
+
+        .login-wrap{
+          width:400px;
+          height:450px;
+        }
+
+        .login-html{
+          height:400px;
+          width:250px;
+        }
+
+        #tab1{
+          margin-left: 25px;
+          font-size: 25px;
+        }
+        #tab2{
+
+          font-size: 25px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 20px;
+          margin-bottom: 30px !important;
+        }
+
+
+        .tbl-header th{
+          font-size: 20px;
+        }
+        .tbl-content td{
+          font-size: 18px;
+        }
+
+        #fdw-pricing-table{
+          margin-top: -80px;
+        }
+
+      hr{
+
+      }
+
+
+
+}
+@media only screen and (max-width: 1440px){
+
+      #homepageBottomHr{
+        margin-top: 50px;
+      }
+      #fdw-pricing-table{
+        margin-top: -50px;
+      }
+      #titleDiv{
+        font-size: 80px;
+      }
+      #snatcherDiv p{
+        font-size: 120px;
+      }
+
+      .nav-desktop{
+        top:150;
+      }
+
+      #pageTextContent{
+        font-size: 30px;
+      }
+
+      #formDiv{
+        width:820px;
+        height:100px;
+      }
+
+      form, .container, .fieldRow , .fieldRow input, button {
+        height: 80px;
+      }
+
+      .pulse{
+        width:144px;
+      }
+
+
+
+      #bottomLine{
+        margin-top: 150px;
+      }
+
+    .footer{
+      position:static;
+    }
+      .footer p{
+        font-size: 15px;
+      }
+
+      .login-wrap{
+        width:400px;
+        height:500px;
+        padding-top: 100px;
+      }
+
+      .login-html{
+        height:500px;
+        width:350px;
+      }
+
+      #tab1{
+        margin-left: 65px;
+        font-size: 30px;
+      }
+      #tab2{
+
+        font-size: 30px;
+      }
+
+
+       #checkBoxGroup{
+        font-size: 20px;
+        margin-bottom: 30px !important;
+      }
+
+
+      .tbl-header th{
+        font-size: 30px;
+      }
+      .tbl-content td{
+        font-size: 18px;
+      }
+
+}
+
+@media only screen and (max-width: 1280px){
+
+        #titleDiv{
+          font-size: 60px;
+        }
+        #snatcherDiv p{
+          font-size: 100px;
+        }
+
+        .nav-desktop{
+          top:250;
+        }
+
+        #pageTextContent{
+          font-size: 20px;
+        }
+
+        #formDiv{
+          width:600px;
+          height:60px;
+        }
+
+        form, .container, .fieldRow , .fieldRow input, button {
+          height: 50px;
+        }
+
+        .pulse{
+          width:134px;
+        }
+
+
+
+        .holderStats{
+          margin-top: -100px;
+        }
+
+        #bottomLine{
+          margin-top: 150px;
+        }
+
+      .footer{
+        position:static;
+      }
+        .footer p{
+          font-size: 15px;
+        }
+
+        .login-wrap{
+          margin-top: 50px;
+          width:300px;
+          height:400px;
+          padding-top: 0;
+        }
+
+        .login-html{
+          margin-top: 15px;
+          height:400px;
+          width:250px;
+        }
+
+        #tab1{
+          margin-left: 45px;
+          font-size: 20px;
+        }
+        #tab2{
+
+          font-size: 20px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 20px;
+          margin-bottom: 30px !important;
+        }
+
+
+        .tbl-header th{
+          font-size: 30px;
+        }
+        .tbl-content td{
+          font-size: 18px;
+        }
+
+}
+
+@media only screen and (max-width: 1024px){
+
+  #stat div{
+    margin-left: -20px;
+  }
+        #titleDiv{
+          font-size: 40px;
+        }
+        #snatcherDiv p{
+          font-size: 80px;
+        }
+
+        .nav-desktop{
+          top:150;
+        }
+
+        #pageTextContent{
+          font-size: 15px;
+        }
+
+        #formDiv{
+          width:450px;
+          height:50px;
+        }
+
+        form, .container, .fieldRow , .fieldRow input, button {
+          height: 45px;
+        }
+
+        .pulse{
+          width:124px;
+        }
+
+
+        .holderStats{
+          margin-top: -280px;
+        }
+
+
+        #fdw-pricing-table  ul  li.show  div, #fdw-pricing-table  ul  li.hiddenStat  div{
+          width:200px;
+        }
+
+      #holder{
+        margin-top: 30px;
+      }
+        #bottomLine{
+          margin-top: 150px;
+        }
+
+      .footer{
+        position:static;
+      }
+        .footer p{
+          font-size: 15px;
+        }
+
+        .login-wrap{
+          margin-top: 20px;
+          width:300px;
+          height:350px;
+          padding-top: 0;
+        }
+
+        .login-html{
+          margin-top: -40px;
+          padding:20px;
+
+          height:290px;
+          width:290px;
+        }
+
+        #tab1{
+          margin-left: 50px;
+          font-size: 20px;
+        }
+        #tab2{
+
+          font-size: 20px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 20px;
+          margin-bottom: 30px !important;
+        }
+
+
+        .tbl-header th{
+          font-size: 30px;
+        }
+        .tbl-content td{
+          font-size: 18px;
+        }
+
+        #arrow{
+          margin-top: -100px;
+          opacity:0.4;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+}
+
+@media only screen and (max-width: 800px){
+        #titleDiv{
+          font-size: 60px;
+        }
+        #snatcherDiv p{
+          font-size: 80px;
+        }
+
+        .nav-desktop{
+          top:150;
+        }
+
+        #pageTextContent{
+          font-size: 20px;
+        }
+
+        #formDiv{
+          width:450px;
+          height:50px;
+        }
+
+        form, .container, .fieldRow , .fieldRow input, button {
+          height: 60px;
+
+        }
+
+        .pulse{
+          width:124px;
+        }
+
+
+
+        .holderStats{
+          margin-top: -280px;
+        }
+
+
+        #fdw-pricing-table  ul  li.show  div, #fdw-pricing-table  ul  li.hiddenStat  div{
+          width:200px;
+        }
+
+        #fdw-pricing-table{
+          margin-top: 100px;
+
+        }
+
+      #holder{
+        margin-top: 30px;
+      }
+        #bottomLine{
+          margin-top: 150px;
+        }
+
+      .footer{
+        position:absolute;
+      }
+        .footer p{
+          font-size: 15px;
+        }
+
+        .login-wrap{
+          width:400px;
+          height:500px;
+          padding-top: 100px;
+        }
+
+        .login-html{
+          height:500px;
+          width:350px;
+        }
+
+        #tab1{
+          margin-left: 45px;
+          font-size: 30px;
+        }
+        #tab2{
+
+          font-size: 30px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 20px;
+          margin-bottom: 30px !important;
+        }
+
+
+        .tbl-header th{
+          font-size: 50px;
+        }
+        .tbl-content td{
+          font-size: 18px;
+        }
+
+      #historyTable{
+        height:500px !important;
+      }
+
+        #arrow{
+          margin-top: -25px;
+          margin-left: 325px;
+          opacity:0.4;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+}
+@media only screen and (max-width: 768px){
+  #viewBtn{
+    margin-left: -140px;
+  }
+  .footer{
+    position: static;
+  }
+  #arrow{
+    margin-top: -25px;
+    margin-left: 310px;
+    opacity:0.4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  #titleDiv{
+    font-size: 50px;
+  }
+  #snatcherDiv p{
+    font-size: 60px;
+  }
+
+  .nav-desktop{
+    top:150;
+  }
+
+  #pageTextContent{
+    font-size: 20px;
+  }
+
+  #formDiv{
+    width:450px;
+    height:50px;
+  }
+
+  form, .container, .fieldRow , .fieldRow input, button {
+    height: 45px;
+  }
+
+  .pulse{
+    width:124px;
+  }
+
+
+      .holderStats{
+        margin-top: -280px;
+      }
+
+    #fdw-pricing-table{
+      margin-top: 150px;
+    }
+      #fdw-pricing-table  ul  li.show  div, #fdw-pricing-table  ul  li.hiddenStat  div{
+        width:200px;
+      }
+
+    #holder{
+      margin-top: 30px;
+    }
+      #bottomLine{
+        margin-top: 150px;
+      }
+
+      .footer{
+        position:absolute;
+      }
+        .footer p{
+          font-size: 15px;
+        }
+
+  .login-wrap{
+    margin-top: 20px;
+    width:500px;
+    height:500px;
+    padding-top: 0;
+  }
+
+  .login-html{
+
+    padding:50px;
+
+    height:500px;
+    width:500px;
+  }
+
+  #tab1{
+    margin-left: 90px;
+    font-size: 30px;
+  }
+  #tab2{
+
+    font-size: 30px;
+  }
+
+
+   #checkBoxGroup{
+    font-size: 20px;
+    margin-bottom: 30px !important;
+  }
+
+  .tbl-header th{
+    font-size: 30px;
+  }
+  .tbl-content td{
+    font-size: 18px;
+  }
+
+  body div.whole-page-wrapper div.content-wrapper section{
+    width:500px;
+    margin-left: 50px;
+  }
+
+  #arrow{
+    margin-top: -25px;
+    opacity:0.4;
+    margin-left: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 414px){
+  #listaTima{
+    padding:5px;
+  }
+  .footer{
+    position: static;
+  }
+
+  .holderStats{
+    margin-top: -250px;
+  }
+  #stat div{
+    margin-left: -20px;
+  }
+  #formDiv{
+    width:350px;
+  }
+  .pulse{
+    width:100px;
+  }
+  .login-wrap{
+    margin-top: 20px;
+    width:80%;
+    height:60%;
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
+
+  .login-html{
+    padding:5px;
+    padding-top: 10px;
+    height:90%;
+    width:90%;
+  }
+
+  #tab1{
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  #tab2{
+
+    font-size: 18px;
+  }
+
+
+   #checkBoxGroup{
+    font-size: 10px;
+    margin-bottom: 30px !important;
+  }
+
+
+
+  #gag{
+    width:90%;
+    height:80%;
+  }
+}
+@media only screen and (max-width: 412px){
+  #gag{
+    width:90%;
+    height:90%;
+  }
+  .login-wrap{
+    margin-top: 20px;
+    width:80%;
+    height:60%;
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
+
+  .login-html{
+    padding:5px;
+    padding-top: 10px;
+    height:90%;
+    width:90%;
+  }
+
+  #tab1{
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  #tab2{
+
+    font-size: 18px;
+  }
+
+
+
+   #checkBoxGroup{
+    font-size: 10px;
+    margin-bottom: 30px !important;
+  }
+
+
+
+  #stat div{
+    margin-left: -20px;
+  }
+  #listaTima{
+    padding:5px;
+    margin-bottom: 100px;
+  }
+  .footer{
+    position: static;
+  }
+  #titleDiv{
+    padding-top: 10px;
+    font-size: 35px;
+  }
+  #formDiv{
+    width:280px;
+    height:50px;
+    margin-left: 30px;
+    padding-left: 0px;
+  }
+  .pulse{
+    width:70px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  #fdw-pricing-table{
+    margin-top: 100px;
+  }
+  #fdw-pricing-table  ul  li.show  div, #fdw-pricing-table  ul  li.hiddenStat  div{
+    width:300px;
+  }
+  #fdw-pricing-table > ul > li:nth-child(3) > div > div.text
+
+  #fdw-pricing-table ul li div {
+    padding-right: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 375px){
+  .holderStats{
+    margin-top: -200px;
+  }
+}
+@media only screen and (max-width: 360px){
+    #titleDiv{
+    padding-top: 0px;
+    font-size: 30px;
+  }
+    #snatcherDiv p{
+    font-size: 60px;
+  }
+
+  .nav-desktop{
+    top:150;
+  }
+
+  #pageTextContent{
+    font-size: 13px;
+  }
+
+  #formDiv{
+    width:320px;
+    height:50px;
+  }
+
+  form, .container, .fieldRow , .fieldRow input, button {
+    height: 45px;
+  }
+
+  .pulse{
+    width:80px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+
+
+  .holderStats{
+    margin-top: -400px;
+  }
+
+    #fdw-pricing-table{
+  margin-top: 150px;
+    }
+    #fdw-pricing-table  ul  li.show  div, #fdw-pricing-table  ul  li.hiddenStat  div{
+    width:200px;
+  }
+
+        #holder{
+          margin-top: 30px;
+        }
+          #bottomLine{
+            margin-top: 150px;
+          }
+
+        .footer{
+          position:static;
+        }
+          .footer p{
+            font-size: 15px;
+          }
+
+          .login-wrap{
+            margin-top: 20px;
+            width:80%;
+            height:60%;
+            padding-top: 0;
+          }
+
+          .login-html{
+            padding:5px;
+            padding-top: 10px;
+            height:90%;
+            width:90%;
+          }
+
+          #tab1{
+            margin-left: 40px;
+            font-size: 18px;
+          }
+          #tab2{
+
+            font-size: 18px;
+          }
+
+
+
+           #checkBoxGroup{
+            font-size: 10px;
+            margin-bottom: 30px !important;
+          }
+
+
+
+
+          .tbl-header th{
+            font-size: 30px;
+          }
+          .tbl-content td{
+            font-size: 18px;
+          }
+
+          body div.whole-page-wrapper div.content-wrapper section{
+            width:500px;
+            margin-left: 50px;
+          }
+
+          #arrow{
+            margin-top: -25px;
+            opacity:0.4;
+            margin-left: 240px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          #stat div{
+            margin-left: -20px;
+          }
+
+          #gag{
+            height:90%;
+            width:90%;
+          }
+          #listaTima{
+            padding:5px;
+          }
+}
+
+
+        /*****IPHONE 4*****/
+@media only screen and (max-width: 320px){
+
+        hr{
+          margin-top: 0;
+        }
+
+        .holderStats{
+          margin-top: -350px;
+        }
+
+        .login-wrap{
+          margin-top: 20px;
+          width:80%;
+          height:70%;
+          padding-top: 0;
+        }
+
+        .login-html{
+          padding:5px;
+          padding-top: 10px;
+          height:90%;
+          width:90%;
+        }
+
+        #tab1{
+          margin-left: 40px;
+          font-size: 18px;
+        }
+        #tab2{
+
+          font-size: 18px;
+        }
+
+
+
+         #checkBoxGroup{
+          font-size: 10px;
+          margin-bottom: 30px !important;
+        }
+
+
+
+
+        #listaTima{
+          padding:5px;
+        }
+        #snatcherDiv{
+          font-size: 20px;
+        }
+
+        #stat div{
+          margin-left: -20px;
+        }
+
+        #gag{
+          width:90%;
+
+        }
+
+}

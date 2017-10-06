@@ -1,0 +1,50 @@
+/************MESSAGES*************/
+/*For previewing messages*/
+.errmsg, .sucmsg, .wrnmsg, .infmsg {
+  background-size: 25px 25px;
+  color: black;
+  border: 1px solid;
+  width: 40%;
+  padding: 1px 0 1px 45px;
+  margin: 5px auto 5px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+  border: 0 solid;
+  text-align: center;
+  font-size: 22px;
+}
+
+/*For previewing error messages*/
+.errmsg {
+  background: linear-gradient(90deg, rgba(124, 12, 18, 0.7) 0%, rgba(124, 12, 18, 0.7) 25%, rgba(124, 12, 18, 0.7) 75%, rgba(124, 12, 18, 0.7) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1), inset 0 0 1px rgba(255, 255, 255, 1);
+}
+
+/*For previewing sucessfull messages*/
+.sucmsg {
+  background: linear-gradient(90deg, rgba(24, 71, 1, 0.7) 0%, rgba(24, 71, 1, 0.7) 25%, rgba(24, 71, 1, 0.7) 75%, rgba(24, 71, 1, 0.7) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1), inset 0 0 1px rgba(255, 255, 255, 1);
+}
+
+/*For previewing warning messages*/
+.wrnmsg {
+  background: linear-gradient(90deg, rgba(160, 141, 0, 0.7) 0%, rgba(160, 141, 0, 0.7) 25%, rgba(160, 141, 0, 0.7) 75%, rgba(160, 141, 0, 0.7) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1), inset 0 0 1px rgba(255, 255, 255, 1);
+}
+
+/*For previewing sucessfull messages*/
+.infmsg {
+  background: linear-gradient(90deg, rgba(1, 28, 66, 0.7) 0%, rgba(1, 28, 66, 0.7) 25%, rgba(1, 28, 66, 0.7) 75%, rgba(1, 28, 66, 0.7) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1), inset 0 0 1px rgba(255, 255, 255, 1);
+}
+
+.hiddenStat{
+  display: none;
+}
+.listitem {
+    list-style-type: none;
+    list-style: none;
+}

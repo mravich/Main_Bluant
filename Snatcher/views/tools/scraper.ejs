@@ -1,0 +1,140 @@
+
+<div class="content-wrapper">
+<div id="titleDiv">
+		Snatch the content you want with...
+</div>
+
+<div id="snatcherDiv">
+		<p>
+		SNATCHER
+		</p>
+	</div>
+
+<div id="pageTextContent">
+<!-- If there is error we display it -->
+<% if(typeof sucess != 'undefined') { %>
+
+<%= sucess %>
+
+<% } %>
+
+
+<!-- If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+  <div id="pageTextContent">
+  <%= error %>
+  </div>
+<% } %>
+
+
+<!-- If there is warning we display it -->
+<% if(typeof info != 'undefined') { %>
+  <div id="pageTextContent">
+  <%= info %>
+  </div>
+<% } %>
+
+
+<!-- If there is warning we display it -->
+<% if(typeof warn != 'undefined') { %>
+  <div id="pageTextContent">
+<%= warn %>
+  </div>
+<% } %>
+</div>
+
+<!-- Enter new scrap URL -->
+<div id="holder">
+<div id="formDiv">
+	<form method="POST" action="/scraper">
+		<div class="container">
+			<div class="fieldRow">
+				<input type ="url" name="item" id="url" placeholder="" required />
+				<label for="url">Enter URL</label>
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				<i id="iconWrong" class="iconCheck fa fa-times"></i>
+				<i id="iconPassed" class="iconCheck fa fa-check"></i>
+			</div>
+		</div>
+
+	<button type="submit" value="submit" class="pulse">Scrape me</button>
+
+		</div>
+		<center>
+			<input type="checkbox" name="scrap_https"><strong>Analyze HTTP headers</strong></input>
+			<input type="checkbox" name="scrap_htmls"><strong>Analyze HTML tags</strong></input>
+			<% if(typeof user != 'undefined') { %>
+
+				<ul id="scrapeOptionsList">
+				<li>
+				<input type="checkbox" name="scrap_headings"><strong>Analyze headings</strong></input>
+				</li>
+				<li>
+				<input type="checkbox" name="scrap_childs"><strong>Analyze child URLs</strong></input>
+				</li>
+				<li>
+				<input type="checkbox" name="scrap_image"><strong>Snatch image</strong></input>
+				</li>
+				<li>
+				<input type="checkbox" name="scrap_private"><strong>Private analyze</strong></input>
+				</li>
+				<li>
+				<input type="checkbox" name="redirects"><strong>Follow redirects</strong></input>
+				</li>
+				</ul>
+			<% } %>
+		</center>
+	</form>
+</div>
+
+</div>
+
+
+
+
+<% if(typeof sucscr != 'undefined') { %>
+
+
+<table class="rwd-table">
+  <tr>
+		<th>SCRAP ID</th>
+    <th>TIME</th>
+    <th>URL</th>
+    <th>STATUS</th>
+    <th>DATE</th>
+		<th>HTTP</th>
+		<th>HTML</th>
+		<th>VIEW</th>
+  </tr>
+	<tr>
+     <td data-th="Scrap ID"><%= sucscr[0].id %></td>
+    <td data-th="Time"><%= sucscr[0].time %></td>
+    <td data-th="URL"><%= sucscr[0].url %></td>
+    <td data-th="status"><%= sucscr[0].status %></td>
+    <td data-th="Date"><%= sucscr[0].date.getDate() + '.' + parseInt(sucscr[0].date.getMonth()+1) + '.' + sucscr[0].date.getFullYear() + '.' %></td>
+		<td data-th="https">
+		<% if(scrap_https == 'on') { %>
+			<img src= "/imgs/true.png" class="icon"></img>
+		<% } else { %>
+			<img src= "/imgs/false.png" class="icon"></img>
+		<% } %>
+		</td>
+		<td data-th="htmls">
+		<% if(scrap_htmls == 'on') { %>
+			<img src= "/imgs/true.png" class="icon"></img>
+		<% } else { %>
+			<img src= "/imgs/false.png" class="icon"></img>
+		<% } %>
+		</td>
+		<td data-th="View">
+			<form method="POST" action="/sitedata">
+				<button type="submit" name="enterid" value="<%=sucscr[0].id%>">View</button>
+			</form>
+		</td>
+
+  </tr>
+</table>
+
+</div>
+<% } %>
+<hr>

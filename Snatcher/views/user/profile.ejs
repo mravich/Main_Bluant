@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+<!-- Title -->
+<div id="titleDiv">
+		User account
+</div>
+
+<div id="snatcherDiv">
+		<p>
+		PROFILE
+		</p>
+		</div>
+
+		<div id="pageTextContent">
+<center>
+<!--If there is sucess we display it -->
+<% if(typeof sucess != 'undefined') { %>
+	<% if(sucess.length > 0) { %>
+  <div class="sucmsg">
+		<%= sucess %>
+	</div>
+<% } %>
+<% } %>
+
+
+<!--If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+	<% if(error.length > 0) { %>
+	  <div class="errmsg">
+			<%= error %>
+		</div>
+	<% } %>
+<% } %>
+
+
+<div class="content-div">
+	<form method="GET" action="/logout">
+		<div class="group">
+			<button type="submit" value="submit" class="pulse">Log out</button>
+	
+		</div>
+	</form>
+</div>
+
+<div class="content-div">
+	<p><strong> Welcome <%= user.username %> </strong></p>
+	<p> This is your profile page !</p>
+</div>
+</div>
+</center>
+</div>
+<hr>

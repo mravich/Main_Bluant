@@ -1,0 +1,96 @@
+<div id="titleDiv">
+		User account
+</div>
+<div id="snatcherDiv">
+		<p>LOGIN or SIGNUP</p>
+</div>
+
+
+
+
+<!--If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+	<% if(error.length > 0) { %>
+	  <div class="errmsg">
+			<%= error %>
+		</div>
+	<% } %>
+<% } %>
+
+<!--If there is error we display it -->
+<% if(typeof error2 != 'undefined') { %>
+	<% if(error2.length > 0) { %>
+	  <div class="errmsg">
+
+			<%= error2 %>
+		</div>
+	<% } %>
+<% } %>
+<div id="pageTextContent">
+
+		Guests can access only basic tools like Scraper and History of analyzes. To access
+		all tools please login to your account or sign up!
+</div>
+
+<div>
+
+</div>
+<!--Login form -->
+<div style="{justify-content: center;
+align-items: center;
+box-sizing: border-box;}">
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" id="tab1">Log In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" id="tab2">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<form action="/login" method="post">
+				<div class="group">
+					<label for="user" class="label" id="userLabel">Username</label>
+					<input id="user" type="text" class="input" name="username">
+				</div>
+				<div class="group">
+					<label for="pass" class="label" id="passLabel">Password</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password">
+				</div>
+				<div class="group" id="checkBoxGroup">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Loged in</label>
+				</div>
+				<div class="group">
+
+					<input type="submit" class="button" value="Log In">
+				</div>
+
+</form>
+			</div>
+			<div class="sign-up-htm">
+				<form action="/signup" method="post">
+				<div class="group">
+
+					<label for="user" class="label" id="userLabel">Username</label>
+					<input id="user" type="text" class="input" name="username">
+				</div>
+				<div class="group">
+					<label for="pass" class="label" id="passLabel">Password</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password">
+				</div>
+
+
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up">
+				</div>
+
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+</div>
+
+<hr>

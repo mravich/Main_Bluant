@@ -1,0 +1,594 @@
+<div class="content-wrapper">
+	<center>
+
+
+<div id="titleDiv">
+		Statistic tools
+</div>
+
+<div id="snatcherDiv">
+		<p>SITE DATA</p>
+		</div>
+
+<div class="siteDataHolder">
+
+		<h1>What was scrapped?</h1>
+									<% if(typeof main != 'undefined') { %>
+
+
+
+					<div class = "smallTable">
+
+
+										<ul>
+											<li>
+												<div>
+														<table>
+																<thead>
+
+																		<tr>
+																			<th>HTTP</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+												<div>
+														<table>
+																<tbody>
+																	<tr>
+																			<td>
+																				<% if(https != '') { %>
+																					<img src= "/imgs/true.png" class="icon"></img>
+																				<% } else { %>
+																					<img src= "/imgs/false.png" class="icon"></img>
+																				<% } %>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+											</li>
+											<li>
+												<div>
+														<table>
+																<thead>
+
+																		<tr>
+																			<th>HTML</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+												<div>
+														<table>
+																<tbody>
+																	<tr>
+																			<td>
+																				<% if(htmls != '') { %>
+																					<img src= "/imgs/true.png" class="icon"></img>
+																				<% } else { %>
+																					<img src= "/imgs/false.png" class="icon"></img>
+																				<% } %>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+											</li>
+											<li>
+												<div>
+														<table>
+																<thead>
+
+																		<tr>
+																			<th>HEADINGS</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+												<div>
+														<table>
+																<tbody>
+																	<tr>
+																			<td>
+																				<% if(headings != '') { %>
+																					<img src= "/imgs/true.png" class="icon"></img>
+																				<% } else { %>
+																					<img src= "/imgs/false.png" class="icon"></img>
+																				<% } %>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+											</li>
+											<li>
+												<div>
+														<table>
+																<thead>
+
+																		<tr>
+																			<th>URLS</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+												<div>
+														<table>
+																<tbody>
+																	<tr>
+																			<td>
+																				<% if(childs != '') { %>
+																					<img src= "/imgs/true.png" class="icon"></img>
+																				<% } else { %>
+																					<img src= "/imgs/false.png" class="icon"></img>
+																				<% } %>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+											</li>
+											<li>
+												<div>
+														<table>
+																<thead>
+
+																		<tr>
+																			<th>IMAGE</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+												<div>
+														<table>
+																<tbody>
+																	<tr>
+																			<td>
+																				<% if(picture != '') { %>
+																					<img src= "/imgs/true.png" class="icon"></img>
+																				<% } else { %>
+																					<img src= "/imgs/false.png" class="icon"></img>
+																				<% } %>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+											</li>
+
+										</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+		<h1>Who was the snatcher?</h1>
+		<p>
+			Scrapping of the site : <%=htmls[0].title%><br/>
+			Was done by : Mravich <br />
+			and shared publicly to other snatchers.
+		</p>
+
+		<h1>General information about the scrape</h1>
+
+
+		<div class="generalInfoTable">
+			<section>
+				<table>
+	    <thead>
+	        <tr>
+	            <th>SCRAPE ID</th>
+	            <th>DATE</th>
+	            <th>TIME</th>
+	            <th>URL</th>
+
+	       </tr>
+	   </thead>
+	   <tbody>
+	       <tr>
+	            <td><%=main[0].id%></td>
+	            <td><%= main[0].date.getDate() + '.' + parseInt(main[0].date.getMonth()+1) + '.' + main[0].date.getFullYear() + '.' %></td>
+	            <td><%=main[0].time%></td>
+	            <td><%=main[0].url%></td>
+
+	       </tr>
+
+	   </tbody>
+	</table>
+			</section>
+
+		</div>
+<div class="smallTable">
+
+
+		<ul>
+			<li>
+				<div>
+						<table>
+								<thead>
+
+										<tr>
+											<th>STATUS CODE</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+				<div>
+						<table>
+								<tbody>
+									<tr>
+											<td>
+												<%=main[0].status%>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+			</li>
+			<% if(typeof https != 'undefined' && https != '') { %>
+				<% if(https[0].server != '') { %>
+
+			<li>
+				<div>
+						<table>
+								<thead>
+
+										<tr>
+											<th>SERVER</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+				<div>
+						<table>
+								<tbody>
+									<tr>
+											<td>
+												<%=https[0].server%>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+			</li>
+<% } %>
+			<% } %>
+			<li>
+				<div>
+						<table>
+								<thead>
+
+										<tr>
+											<th>CONTENT TYPE</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+				<div>
+						<table>
+								<tbody>
+									<tr>
+											<td>
+												<%= https[0].type %>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+			</li>
+			<li>
+				<div>
+						<table>
+								<thead>
+
+										<tr>
+											<th>CONTENT LENGTH</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+				<div>
+						<table>
+								<tbody>
+									<tr>
+											<td>
+												<%=https[0].length%>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+			</li>
+
+</ul>
+</div>
+<% } %>
+
+<% if(typeof headings != 'undefined' && headings != '') { %>
+<h1> Scrapped headings</h1>
+
+
+
+<div class="scrappedHeadingsHolder">
+
+	<ul>
+		<li id="biggerTable">
+			<!--**********TABLICA P-TAGOVA**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>P-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 6 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="biggerTable">
+			<!--**********TABLICA A-TAGOVA**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>A-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 7 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+		<li id="smallerTable">
+			<!--**********TABLICA H1**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+								<tr><th>H1-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+								<% for(var i=0;i<headings.length;i++) { %>
+									<% if(headings[i].value == 0 && headings[i].text!="") { %>
+								<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="smallerTable">
+			<!--**********TABLICA H2**********-->
+			<div class="headingTable">
+				<table class="demoTable" >
+						<thead>
+							<tr><th>H2-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 1 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="smallerTable">
+			<!--**********TABLICA H3**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>H3-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 2 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="smallerTable">
+			<!--**********TABLICA H4**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>H4-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 3 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="smallerTable">
+			<!--**********TABLICA H5**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>H5-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 4 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li id="smallerTable">
+			<!--**********TABLICA H6**********-->
+			<div class="headingTable">
+				<table class="demoTable">
+						<thead>
+							<tr><th>H6-TAG VALUE</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<headings.length;i++) { %>
+								<% if(headings[i].value == 5 && headings[i].text!="") { %>
+							<tr><td><%= headings[i].text %></td></tr><%}%><%}%>
+						</tbody>
+				</table>
+			</div>
+		</li>
+
+
+	</ul>
+
+
+
+		<% } %>
+</div>
+<% if(typeof childs != 'undefined' && childs != '' && childs.length > 0) { %>
+<h1 style="display: inline-block;">Snatched child urls</h1>
+
+
+
+
+<div class="generalInfoTable">
+
+		<table class="scrollableTable">
+
+		<thead>
+				<tr>
+					<th>CHILD ID</th>
+					<th>URL</th>
+					<th>SCRAPE</th>
+
+			 </tr>
+	 </thead>
+
+			<tbody>
+		 	 <% for(var i=0;i<childs.length;i++) {%>
+		 		 <tr>
+		 			 <td><%= childs[i].id %></td>
+		 			 <td><%= childs[i].url %></td>
+		 			 <td>
+		 				 <form method="POST" action="/scraperx">
+		 				 <button type="submit" name="item" value="<%=childs[i].url%>">Analyze</button>
+		 				 </form>
+		 		 </td>
+
+		 		 </tr>
+		 		 <% } %>
+
+		  </tbody>
+
+
+</table>
+
+
+</div>
+
+<div>
+
+
+
+
+
+
+
+</div>
+
+<% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+</div>

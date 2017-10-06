@@ -1,0 +1,104 @@
+
+
+
+
+<div class="content-wrapper">
+
+<div id="titleDiv">
+		Analyze webpages with...
+</div>
+
+<div id="snatcherDiv">
+		<p>
+		SNATCHER
+		</p>
+		</div>
+
+
+
+
+		<div id="pageTextContent">
+			Welcome to Snatcher, free online tool for analyzing webpages. Snatcher is created
+					for educational purposes and everyone can use it. If you are interested in
+					further development of Snatcher you can find the source code
+					<a target="_blank" href="http://github.com/lukamatkic/web-analyzer" class="link">here</a>.
+					Enjoy!
+		</div>
+<div id="holder">
+<div id="formDiv">
+	<form method="POST" action="/scraperx">
+		<div class="container">
+			<div class="fieldRow">
+				<input type ="url" name="item" id="url" placeholder="" required />
+				<label for="url">Enter URL</label>
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				<i id="iconWrong" class="iconCheck fa fa-times"></i>
+				<i id="iconPassed" class="iconCheck fa fa-check"></i>
+			</div>
+		</div>
+
+	<button type="submit" value="submit" class="pulse">Scrape me</button>
+
+
+
+
+
+		</div>
+	</form>
+</div>
+
+</div>
+
+<div class ="holderStats">
+	<div id="fdw-pricing-table">
+		<ul class="listitem">
+
+				<li class="show">
+					<div class="plan plan1" id="stat">
+			        <div class="header">User<br>Accounts</div>
+			        <div class="text"><%= data.users %></div>
+			    </div>
+					<div class="plan plan2" id="stat">
+			        <div class="header">User<br>logins</div>
+			        <div class="text"><%= data.logins %></div>
+			    </div>
+					<div class="plan plan3" id="stat">
+			        <div class="header">URL<br>Analyzes</div>
+			        <div class="text"><%= data.scraps %></div>
+			    </div>
+				</li>
+				<li class="hiddenStat" style="display:none;">
+					<div class="plan plan1" id="stat">
+							<div class="header">Child<br>URLs</div>
+							<div class="text"><%= data.childs %></div>
+					</div>
+					<div class="plan plan2" id="stat">
+			        <div class="header">Analyzed<br>headers</div>
+			        <div class="text"><%= data.headings %></div>
+					</div>
+					<div class="plan plan3" id="stat">
+							<div class="header">HTTP<br>headers</div>
+							<div class="text"><%= data.https %></div>
+					</div>
+				</li>
+
+				<li class="hiddenStat" style="display:none;">
+					<div class="plan plan1" id="stat">
+			        <div class="header">HTML<br>tags</div>
+			        <div class="text"><%= data.htmls %></div>
+					</div>
+					<div class="plan plan2" id="stat">
+			        <div class="header">Snatched<br>pictures</div>
+			        <div class="text"><%= data.pictures %></div>
+					</div>
+					<div class="plan plan3" id="stat">
+			        <div class="header">Content<br>length</div>
+			        <div class="text"><%= data.clength %></div>
+					</div>
+				</li>
+
+			</ul>
+	</div>
+</div>
+</div>
+<hr>

@@ -1,0 +1,101 @@
+<div id="titleDiv2">
+	<center>
+		<p>Statistic tools</p>
+	</center>
+</div>
+
+<div id="snatcherDiv2">
+	<center>
+		<p>CHILD URLs</p>
+	</center>
+</div>
+
+
+<!--If there is error we display it -->
+<% if(typeof error != 'undefined') { %>
+  <div class="errmsg">
+    <p><%= error %></p>
+  </div>
+<% } %>
+
+
+<!--If there is warning we display it -->
+<% if(typeof info != 'undefined') { %>
+  <div class="infmsg">
+    <p><%= info %></p>
+  </div>
+<% } %>
+
+
+<!-- Form for ID input to search for child scraps -->
+<div class="content-div">
+	<form method="POST" action="/childs">
+	  <input type ="text" name="enterid" placeholder="Enter ID..." required />
+	  <button type="submit" value="submit" name="idbutton">Preview childs</button>
+	</form>
+</div>
+
+
+<% if(typeof childs != 'undefined') { %>
+<div id="scrap-table" class="content-div">
+	<section>
+
+		<table class="data-table">
+
+			<!-- Stvaramo header tablice -->
+			<thead class="table-thread">
+				<tr>
+					<th>CHILD ID</th>
+					<th>SCRAP ID</th>
+					<th>URL</th>
+					<th>SCRAPE</th>
+				</tr>
+			</thead>
+
+			<!-- Stvaramo footer tablice -->
+			<tfoot class="table-thread">
+				<tr>
+					<th>CHILD ID</th>
+					<th>SCRAP ID</th>
+					<th>URL</th>
+					<th>SCRAPE</th>
+				</tr>
+			</tfoot>
+
+			<!-- Za svaki ispis iz tablice stvaramo row u tablici -->
+			<% for(var i=0;i<childs.length;i++) {%>
+
+				<!-- Svakom drugom stavljamo crnu pozadinu -->
+				<% if(i%2 == 0) {%>
+					<tbody>
+				<%} else {%>
+					<tbody class="table-body">
+				<% } %>
+
+					<tr>
+						<td><%= childs[i].id %></td>
+						<td><%= childs[i].id_scrap %></td>
+						<td><%= childs[i].url %></td>
+
+						<td>
+							<form method="POST" action="/scraper">
+								<button type="submit" name="item" value="<%=childs[i].url%>">Analyze</button>
+							</form>
+						</td>
+
+					</tr>
+				</tbody>
+			<% } %>
+
+		</table>
+	</section>
+</div>
+<% } %>
+
+
+<hr>
+
+
+<div class="content-div">
+	<p>Want to scrape some site ? Click <a href="/scraper" class="link">here</a>.</p>
+</div>
