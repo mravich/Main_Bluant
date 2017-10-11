@@ -1,0 +1,5 @@
+c:\users\bluant\documents\visual studio 2017\Projects\PunkDPC\PunkDPC\bin\Debug\PunkDPC.exe
+c:\users\bluant\documents\visual studio 2017\Projects\PunkDPC\PunkDPC\bin\Debug\PunkDPC.pdb
+c:\users\bluant\documents\visual studio 2017\Projects\PunkDPC\PunkDPC\obj\Debug\PunkDPC.csprojResolveAssemblyReference.cache
+c:\users\bluant\documents\visual studio 2017\Projects\PunkDPC\PunkDPC\obj\Debug\PunkDPC.exe
+c:\users\bluant\documents\visual studio 2017\Projects\PunkDPC\PunkDPC\obj\Debug\PunkDPC.pdb
