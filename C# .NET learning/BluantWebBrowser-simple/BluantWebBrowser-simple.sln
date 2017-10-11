@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluantWebBrowser-simple", "BluantWebBrowser-simple\BluantWebBrowser-simple.csproj", "{EE8449EB-E9EB-4E5B-8EAA-5AA6986F2E02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE8449EB-E9EB-4E5B-8EAA-5AA6986F2E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8449EB-E9EB-4E5B-8EAA-5AA6986F2E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8449EB-E9EB-4E5B-8EAA-5AA6986F2E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8449EB-E9EB-4E5B-8EAA-5AA6986F2E02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

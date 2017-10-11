@@ -1,0 +1,8 @@
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\bin\Debug\BluantWebBrowser-simple.exe
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\bin\Debug\BluantWebBrowser-simple.pdb
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser_simple.Properties.Resources.resources
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser-simple.csproj.GenerateResource.Cache
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser-simple.exe
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser-simple.pdb
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser_simple.t.resources
+c:\users\bluant\documents\visual studio 2017\Projects\BluantWebBrowser-simple\BluantWebBrowser-simple\obj\Debug\BluantWebBrowser-simple.csprojResolveAssemblyReference.cache
